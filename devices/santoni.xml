@@ -7,4 +7,9 @@
     <!-- vendor -->
     <project path="vendor/xiaomi" name="bitrvmpd/android_vendor_xiaomi_santoni" remote="github" revision="cm-14.1" />
 
+
+    <!-- santoni related fixes-->
+    <!-- Flac playback fix -->
+    <remove-project name="LineageOS/android_frameworks_av"/>
+    <project path="frameworks/av" name="bitrvmpd/android_frameworks_av" groups="pdk"/>
 </manifest>
