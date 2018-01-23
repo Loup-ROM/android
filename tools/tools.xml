@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <!-- build script -->
-    <project path="loup/tools" name="bitrvmpd/android_loup_tools" remote="github" revision="cm-14.1" />
+    <project path="loup/tools" name="bitrvmpd/android_loup_tools" remote="github" revision="loup-n" />
 
     <!-- Remove builint AOSP compiler -->
     <remove-project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" />
