@@ -9,8 +9,7 @@
   <!-- Add UberTC toolchain -->
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="bitrvmpd/aarch64-linux-android-6.x" remote="github" revision="master" />
 
-  <!-- LineageOS specific packages -->
-  <remove-project name="platform/system/sepolicy" />
-  <project path="system/sepolicy" name="LineageOS/android_system_sepolicy" groups="pdk" remote="github" revision="cm-14.1" />
+  <!-- CAF additions -->
+  <project path="device/qcom/sepolicy" name="LineageOS/android_device_qcom_sepolicy" remote="github" revision="cm-14.1" />
 </manifest>
 
