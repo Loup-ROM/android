@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <!-- device tree -->	
-    <project path="device/xiaomi/santoni" name="bitrvmpd/android_device_xiaomi_santoni" remote="github" revision="cm-14.1" />
+    <project path="device/xiaomi/santoni" name="bitrvmpd/android_device_xiaomi_santoni" remote="github" revision="du" />
     <!-- kernel -->
     <project path="kernel/xiaomi/msm8937" name="bitrvmpd/msm-3.18" remote="github" revision="rel/msm-3.18-nougat" />
     <!-- vendor -->
@@ -10,6 +10,6 @@
 
     <!-- santoni related fixes-->
     <!-- Flac playback fix -->
-    <remove-project name="LineageOS/android_frameworks_av"/>
-    <project path="frameworks/av" name="bitrvmpd/android_frameworks_av" groups="pdk"/>
+    <!--<remove-project name="LineageOS/android_frameworks_av"/>
+    <project path="frameworks/av" name="bitrvmpd/android_frameworks_av" groups="pdk"/>-->
 </manifest>
