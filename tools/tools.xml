@@ -8,5 +8,8 @@
 
   <!-- Add UberTC toolchain -->
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="bitrvmpd/aarch64-linux-android-6.x" remote="github" revision="master" />
+    
+  <!-- Generic qcom common configuration tools -->
+  <project path="device/qcom/common" name="LineageOS/android_device_qcom_common"/>
 </manifest>
 
