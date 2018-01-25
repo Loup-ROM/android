@@ -13,11 +13,7 @@
   <project path="device/qcom/common" name="LineageOS/android_device_qcom_common"/>
   
   <!-- Add sdllvm 4.0 -->
-  <project path="prebuilts/clang/linux-x86/host/sdclang-4.0/" name="hyperUnicorns/sdclang-4.0" revision="master" remote="github" />
+  <project path="prebuilts/clang/linux-x86/host/sdclang-4.0/" name="ThankYouMario/proprietary_vendor_qcom_sdclang-3.8_linux-x86" revision="nougat-mr2" remote="github" />
     
-  <!-- Remove LOS pdfium -->
-   <remove-project name="LineageOS/android_external_pdfium"  />
-  <!-- add one from google oreo branch -->
-   <project path="external/pdfium" name="platform/external/pdfium" groups="pdk" remote="aosp" revision="refs/tags/android-8.0.0_r9"/>
 </manifest>
 
