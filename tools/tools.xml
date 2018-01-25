@@ -11,5 +11,8 @@
     
   <!-- Generic qcom common configuration tools -->
   <project path="device/qcom/common" name="LineageOS/android_device_qcom_common"/>
+  
+  <!-- Add sdllvm 4.0 -->
+  <project path="prebuilts/clang/linux-x86/host/sdclang-4.0/" name="hyperUnicorns/sdclang-4.0" revision="master" remote="github" />
 </manifest>
 
