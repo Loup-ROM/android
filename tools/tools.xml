@@ -16,5 +16,7 @@
   <!-- Add sdllvm 3.8 -->
   <project path="prebuilts/clang/linux-x86/host/sdclang-3.8/" name="ThankYouMario/proprietary_vendor_qcom_sdclang-3.8_linux-x86" revision="nougat-mr2" remote="github" />
     
+  <!-- Add OpenDelta Updater -->
+   <project path="packages/apps/OpenDelta" name="bitrvmpd/android_packages_apps_OpenDelta" />
 </manifest>
 
