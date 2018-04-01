@@ -5,7 +5,7 @@
     <!-- kernel -->
     <project path="kernel/xiaomi/msm8937" name="bitrvmpd/msm-3.18" remote="github" revision="rel/msm-3.18-nougat" />
     <!-- vendor -->
-    <project path="vendor/xiaomi" name="bitrvmpd/android_vendor_xiaomi_santoni" remote="github" revision="cm-14.1" />
+    <project path="vendor/xiaomi" name="bitrvmpd/android_vendor_xiaomi_santoni" remote="github" revision="hybris-14.1" />
 
 
     <!-- santoni related fixes-->
