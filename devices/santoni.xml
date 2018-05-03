@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <!-- device tree -->	
-    <project path="device/xiaomi/santoni" name="bitrvmpd/android_device_xiaomi_santoni" remote="github" revision="lineage-15.1-v2" />
+    <project path="device/xiaomi/santoni" name="bitrvmpd/android_device_xiaomi_santoni" remote="github" revision="lineage-15.1" />
     <!-- kernel -->
     <project path="kernel/xiaomi/msm8937" name="bitrvmpd/msm-3.18" remote="github" revision="rel/msm-3.18-oreo" />
     <!-- vendor -->
@@ -9,8 +9,8 @@
 
 
     <!-- santoni related fixes-->
-    <!-- Flac/Camera playback fix -->
-    <remove-project name="LineageOS/android_frameworks_av"/>
-    <project path="frameworks/av" name="Nikesh001/android_frameworks_av" revision="o2" groups="pdk"/>
+    <!-- Flac playback fix -->
+    <!--<remove-project name="LineageOS/android_frameworks_av"/>-->
+    <!--<project path="frameworks/av" name="bitrvmpd/android_frameworks_av" groups="pdk"/>-->
 
 </manifest>
