@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <!-- device tree -->	
-    <project path="device/xiaomi/santoni" name="bitrvmpd/android_device_xiaomi_santoni" remote="github" revision="lineage-15.1" />
+    <project path="device/xiaomi/santoni" name="bitrvmpd/android_device_xiaomi_santoni" remote="github" revision="lineage-15.1-v2" />
     <!-- kernel -->
     <project path="kernel/xiaomi/msm8937" name="bitrvmpd/msm-3.18" remote="github" revision="rel/msm-3.18-oreo" />
     <!-- vendor -->
