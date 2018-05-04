@@ -510,4 +510,5 @@
   <include name="snippets/cm.xml" />
   <include name="tools/tools.xml"/>
   <include name="devices/santoni.xml"/>
+  <include name="addons/substratum.xml"/>
 </manifest>
