@@ -3,5 +3,5 @@
     <!-- Get rid of Lineage repos -->
     <remove-project name="LineageOS/android_packages_apps_CMParts" />
     <!-- Import my repo -->
-    <project path="frameworks/base" name="Loup-ROM/android_packages_apps_CMParts" />
+    <project path="packages/apps/CMParts" name="Loup-ROM/android_packages_apps_CMParts" />
 </manifest>
