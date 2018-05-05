@@ -14,17 +14,17 @@
     <remove-project name="LineageOS/android_vendor_cm" />
 
     <!-- Track my repos -->
-    <project path="frameworks/base" name="bitrvmpd/android_frameworks_base" />
-    <project path="frameworks/native" name="bitrvmpd/android_frameworks_native" />
-    <project path="packages/apps/Contacts" name="bitrvmpd/android_packages_apps_Contacts" />
-    <project path="packages/apps/ContactsCommon" name="bitrvmpd/android_packages_apps_ContactsCommon" />
-    <project path="packages/apps/Dialer" name="bitrvmpd/android_packages_apps_Dialer" />
-    <project path="packages/apps/ExactCalculator" name="bitrvmpd/android_packages_apps_ExactCalculator" />
-    <project path="packages/apps/PackageInstaller" name="bitrvmpd/android_packages_apps_PackageInstaller" />
-    <project path="packages/apps/PhoneCommon" name="bitrvmpd/android_packages_apps_PhoneCommon" />
-    <project path="packages/apps/Settings" name="bitrvmpd/android_packages_apps_Settings" />
-    <project path="system/sepolicy" name="bitrvmpd/android_system_sepolicy" />
-    <project path="vendor/cm" name="bitrvmpd/android_vendor_cm" />
+    <project path="frameworks/base" name="Loup-ROM/android_frameworks_base" />
+    <project path="frameworks/native" name="Loup-ROM/android_frameworks_native" />
+    <project path="packages/apps/Contacts" name="Loup-ROM/android_packages_apps_Contacts" />
+    <project path="packages/apps/ContactsCommon" name="Loup-ROM/android_packages_apps_ContactsCommon" />
+    <project path="packages/apps/Dialer" name="Loup-ROM/android_packages_apps_Dialer" />
+    <project path="packages/apps/ExactCalculator" name="Loup-ROM/android_packages_apps_ExactCalculator" />
+    <project path="packages/apps/PackageInstaller" name="Loup-ROM/android_packages_apps_PackageInstaller" />
+    <project path="packages/apps/PhoneCommon" name="Loup-ROM/android_packages_apps_PhoneCommon" />
+    <project path="packages/apps/Settings" name="Loup-ROM/android_packages_apps_Settings" />
+    <project path="system/sepolicy" name="Loup-ROM/android_system_sepolicy" />
+    <project path="vendor/cm" name="Loup-ROM/android_vendor_cm" />
 
     <!-- Track ThemeInterfacer -->
     <project path="packages/services/ThemeInterfacer" name="substratum/interfacer" remote="github" revision="n-rootless" />
