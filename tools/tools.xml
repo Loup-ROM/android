@@ -15,7 +15,7 @@
   <project path="device/qcom/common" name="LineageOS/android_device_qcom_common"/>
   
   <!-- Add sdllvm 4.0 -->
-  <project path="prebuilts/clang/linux-x86/host/sdclang-4.0/" name="hyperUnicorns/sdclang-4.0" revision="master" remote="github" />
+  <project path="prebuilts/clang/linux-x86/host/clang-sd4.0/" name="hyperUnicorns/sdclang-4.0" revision="master" remote="github" />
     
   <!-- Add OpenDelta Updater -->
    <project path="packages/apps/OpenDelta" name="bitrvmpd/android_packages_apps_OpenDelta" remote="github" revision="android-8.1" />
