@@ -3,7 +3,7 @@
     <!-- build script -->
     <project path="loup/tools" name="Loup-ROM/android_loup_tools" remote="github" revision="caf-7.1">
         <!-- Compile inline kernel -->
-        <copyfile dest="build/core/tasks" src="kernel.mk"/>
+        <copyfile dest="build/core/tasks/kernel.mk" src="kernel.mk"/>
     </project>
 
     <!-- Remove builint AOSP compiler -->
