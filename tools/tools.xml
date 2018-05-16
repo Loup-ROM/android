@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <!-- build script -->
-    <project path="loup/tools" name="Loup-ROM/android_loup_tools" remote="github" revision="caf-7.1" />
+    <project path="loup/tools" name="Loup-ROM/android_loup_tools" remote="github" revision="caf-7.1">
+        <!-- Compile inline kernel -->
+        <copyfile dest="build/core/tasks" src="kernel.mk"/>
+    </project>
 
     <!-- Remove builint AOSP compiler -->
     <remove-project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" />
-    <!--<remove-project name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9"/>-->
+    <!-- Remove prima, it's included in the kernel -->
+    <remove-project name="platform/vendor/qcom-opensource/wlan/prima" />
+
+    <!-- Add missing projects -->
+    <project path="external/ant-wireless/antradio-library" name="LineageOS/android_external_ant-wireless_antradio-library" groups="qcom,qcom_audio,pdk" revision="cm-14.1" remote="github"/>    
     
-  <!-- Add UberTC toolchain -->
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="bitrvmpd/aarch64-linux-android-6.x" remote="github" revision="master" />
-  <!--<project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="bitrvmpd/arm-linux-androideabi-6.x" remote="github" revision="master" groups="pdk,linux,arm" clone-depth="1" />-->
-  <!-- Generic qcom common configuration tools | Check CAF-->
-  <!--<project path="device/qcom/common" name="LineageOS/android_device_qcom_common"/>-->
+    <!-- Add UberTC toolchain -->
+    <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="bitrvmpd/aarch64-linux-android-6.x" remote="github" revision="master" />
   
-  <!-- Add sdllvm 3.8 -->
-  <project path="prebuilts/clang/linux-x86/host/sdclang-3.8/" name="ThankYouMario/proprietary_vendor_qcom_sdclang-3.8_linux-x86" revision="nougat-mr2" remote="github" />
+    <!-- Add sdllvm 3.8 -->
+    <project path="prebuilts/clang/linux-x86/host/sdclang-3.8/" name="ThankYouMario/proprietary_vendor_qcom_sdclang-3.8_linux-x86" revision="nougat-mr2" remote="github" />
     
-  <!-- Add OpenDelta Updater -->
-   <project path="packages/apps/OpenDelta" name="Loup-ROM/android_packages_apps_OpenDelta" remote="github" revision="android-7.1" />
+    <!-- Add OpenDelta Updater -->
+    <project path="packages/apps/OpenDelta" name="Loup-ROM/android_packages_apps_OpenDelta" remote="github" revision="android-7.1" />
 </manifest>
 
