@@ -3,8 +3,8 @@
     <!-- build script -->
     <project path="loup/tools" name="Loup-ROM/android_loup_tools" remote="github" revision="caf-7.1" />
 
-    <!-- Remove builint LineageOS compiler -->
-    <!--<remove-project name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" />-->
+    <!-- Remove builint AOSP compiler -->
+    <remove-project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" />
     <!--<remove-project name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9"/>-->
     
   <!-- Add UberTC toolchain -->
