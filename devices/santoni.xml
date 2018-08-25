@@ -11,5 +11,5 @@
     <!-- santoni related fixes-->
     <!-- Flac playback fix -->
     <remove-project name="platform/frameworks/av"/>
-    <project path="frameworks/av" name="Loup-ROM/android_frameworks_av" revision="cm-14.1" groups="pdk"/>
+    <project path="frameworks/av" name="Loup-ROM/android_frameworks_av" remote="github" revision="cm-14.1" groups="pdk"/>
 </manifest>
