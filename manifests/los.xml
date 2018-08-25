@@ -39,7 +39,7 @@
   <project name="android_vendor_qcom_opensource_cryptfs_hw" path="vendor/qcom/opensource/cryptfs_hw" remote="los" />
   <!-- END LINEAGE-OS -->
   
-  <remove-project name="platform/system/bt" />
+  <remove-project name="platform_system_bt" />
   <project name="android_system_bt" path="system/bt" remote="los" revision="cm-14.1" />
   
 </manifest>
