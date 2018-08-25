@@ -10,6 +10,6 @@
 
     <!-- santoni related fixes-->
     <!-- Flac playback fix -->
-    <remove-project name="LineageOS/android_frameworks_av"/>
+    <remove-project name="platform/frameworks/av"/>
     <project path="frameworks/av" name="Loup-ROM/android_frameworks_av" groups="pdk"/>
 </manifest>

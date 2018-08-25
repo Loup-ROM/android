@@ -37,7 +37,7 @@
   <remove-project name="platform/external/toybox" />
   <remove-project name="platform/external/wpa_supplicant_8" />
   <remove-project name="platform/external/zlib" />
-  <remove-project name="platform/frameworks/av" />
+  <!--<remove-project name="platform/frameworks/av" />-->
   <remove-project name="platform/frameworks/base" />
   <remove-project name="platform/frameworks/native" />
   <remove-project name="platform/frameworks/opt/net/wifi" />
@@ -114,7 +114,7 @@
   <project name="platform_external_toybox" path="external/toybox" remote="aosp-caf" />
   <project name="platform_external_wpa_supplicant_8" path="external/wpa_supplicant_8" remote="aosp-caf" />
   <project name="platform_external_zlib" path="external/zlib" remote="aosp-caf" />
-  <project name="platform_frameworks_av" path="frameworks/av" remote="aosp-caf" />
+  <!--<project name="platform_frameworks_av" path="frameworks/av" remote="aosp-caf" />-->
   <project name="platform_frameworks_base" path="frameworks/base" remote="aosp-caf" />
   <project name="platform_frameworks_native" path="frameworks/native" remote="aosp-caf" />
   <project name="platform_frameworks_opt_net_wifi" path="frameworks/opt/net/wifi" remote="aosp-caf" />
