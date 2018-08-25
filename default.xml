@@ -372,7 +372,7 @@
   <project groups="qcom,default" name="platform/hardware/qcom/media" path="hardware/qcom/media" />
   <project groups="qcom_wlan" name="platform/hardware/qcom/wlan" path="hardware/qcom/wlan" />
   <project groups="pdk" name="platform/hardware/ril" path="hardware/ril" />
-  <project name="platform/hardware/stm" path="hardware/stm" />
+  <!--<project name="platform/hardware/stm" path="hardware/stm" />-->
   <project groups="pdk" name="platform/libcore" path="libcore" />
   <project groups="pdk" name="platform/libnativehelper" path="libnativehelper" />
   <project groups="generic_fs" name="platform/ndk" path="ndk" />
