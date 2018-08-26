@@ -8,8 +8,8 @@
     <!--<remove-project name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9"/>-->
     
   <!-- Add UberTC toolchain -->
-  <!--<remove-project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9"/>
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="bitrvmpd/aarch64-linux-android-6.x" remote="github" revision="master" />-->
+  <remove-project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9"/>
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="bitrvmpd/aarch64-linux-android-6.x" remote="github" revision="master" />
   <!--<project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="bitrvmpd/arm-linux-androideabi-6.x" remote="github" revision="master" groups="pdk,linux,arm" clone-depth="1" />-->
   <!-- Generic qcom common configuration tools -->
   <!--<project path="device/qcom/common" name="LineageOS/android_device_qcom_common"/>-->
