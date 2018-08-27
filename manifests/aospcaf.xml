@@ -20,7 +20,7 @@
   <remove-project name="device/sample" />
   <remove-project name="kernel/msm-4.4" />
   <remove-project name="platform/abi/cpp" />
-  <!--<remove-project name="platform/art" />-->
+  <remove-project name="platform/art" />
   <remove-project name="platform/bionic" />
   <remove-project name="platform/build" />
   <remove-project name="platform/build/kati" />
@@ -91,7 +91,7 @@
   <!-- BEGIN AOSP-CAF -->
   <project name="device_qcom_common" path="device/qcom/common" remote="aosp-caf" />
   <project name="device_qcom_sepolicy" path="device/qcom/sepolicy" remote="aosp-caf" />
-  <!--<project name="platform_art" path="art" remote="aosp-caf" />-->
+  <project name="platform_art" path="art" remote="aosp-caf" />
   <project name="platform_bionic" path="bionic" remote="aosp-caf" />
   <project name="platform_build" path="build" remote="aosp-caf" >
   <copyfile src="core/root.mk" dest="Makefile" />
