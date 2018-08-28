@@ -1,7 +1,7 @@
 Okami ROM
 ===========
 
-This is heavily based on the work of @Meninblac007's [AOSP-CAF](https://github.com/AOSP-CAF) repo. But with the goal of having the latest Android security patches. Some parts are from [LOS](https://github.com/LineageOS), most of the stuff comes from [CAF](https://source.codeaurora.org/quic/la/) repos.
+This is heavily based on the work of Meninblac007's [AOSP-CAF](https://github.com/AOSP-CAF) repo. But with the goal of having the latest Android security patches. Some parts are from [LOS](https://github.com/LineageOS), most of the stuff comes from [CAF](https://source.codeaurora.org/quic/la/) repos.
 
 As usual I'll be using sdclang 3.8 + uberTC.
 
