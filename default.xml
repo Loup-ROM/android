@@ -2,7 +2,11 @@
 <manifest>
   <remote  name="los"
            fetch="https://github.com/LineageOS"
-           revision="refs/heads/cm-14.1" />
+	   revision="refs/heads/cm-14.1" />
+
+  <remote  name="loup"
+           fetch="https://github.com/Loup-ROM"
+	   revision="refs/heads/caf-n" />
 
   <remote  name="caf"
            fetch="http://source.codeaurora.org/quic/la"
@@ -551,6 +555,9 @@
 
   <!-- LOS additions -->
   <include name="manifests/los.xml"/>
+
+  <!-- Loup-ROM patches -->
+  <include name="manifests/loup.xml"/>
 
   <!-- Devices -->
   <include name="devices/santoni.xml"/>
