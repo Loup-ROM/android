@@ -6,7 +6,7 @@
 
   <remote  name="loup"
            fetch="https://github.com/Loup-ROM"
-	   revision="refs/heads/caf-n" />
+	   revision="refs/heads/test-n" />
 
   <remote  name="caf"
            fetch="http://source.codeaurora.org/quic/la"
