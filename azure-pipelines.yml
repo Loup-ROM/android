@@ -9,7 +9,7 @@ pool:
 steps:
 - script: |
     echo Hello, world!
-    apt get update
+    apt-get update
   displayName: 'Run a muti-line script 1'
 
 - script: |
