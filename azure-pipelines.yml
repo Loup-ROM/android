@@ -39,7 +39,7 @@ steps:
 - script: |
     cd $WORKSPACE
     ~/bin/repo init -u git://github.com/bitrvmpd/android.git -b $ANDROID_VERSION --depth=1
-    ~/bin/repo sync -c -n --force-sync && ~/bin/repo sync -c -l
+    ~/bin/repo sync -c -n --force-sync -j 16 && ~/bin/repo sync -c -l -j 16
   displayName: 'Syncing sources'
 
 - script: |
