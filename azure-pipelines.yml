@@ -16,6 +16,10 @@ steps:
   displayName: 'Update our repos!'
 
 - script: |
+    mkdir ~/bin && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && sudo chmod a+x ~/bin/repo && export PATH="$HOME/bin:$PATH"
+  displayName: 'Downloading repo from google'
+  
+- script: |
     sudo apt-get install -y g++ zip ccache gcc make libfl-dev libncurses5-dev flex bc kmod
   displayName: 'Downloading kernel build dependencies'
 
@@ -26,10 +30,6 @@ steps:
     sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/libfl.so
     sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/libfl.so.2
   displayName: 'Downloading ROM build dependencies'
-
-- script: |
-    curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && sudo chmod a+x ~/bin/repo && export PATH="$HOME/bin:$PATH"
-  displayName: 'Downloading repo from google'
 
 - script: |
     ls -lah $WORKSPACE
