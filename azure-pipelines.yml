@@ -6,9 +6,13 @@
 pool:
   vmImage: 'Ubuntu 16.04'
 
+variables:
+  WORKSPACE: '$(system.defaultWorkingDirectory)' # Current workspace
+  ANDROID_VERSION: 'cm-14.1' # Default branch
+
 steps:
 - script: |
-    sudo apt-get update
+    sudo apt-get update --fix-missing
   displayName: 'Update our repos!'
 
 - script: |
@@ -17,9 +21,16 @@ steps:
 
 - script: |
     sudo apt-get install -y build-essential g++-multilib gcc-multilib gperf imagemagick lib32ncurses5-dev lib32readline6-dev lib32z1-dev libesd0-dev liblz4-tool libsdl1.2-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush schedtool squashfs-tools xsltproc zlib1g-dev rsync autoconf automake perl
+    mkdir $WORKSPACE/android-dependencies && git clone https://github.com/bitrvmpd/jenkins-android-build.git --depth=1 $WORKSPACE/android-dependencies/jenkins-android-build
+    sudo mv $WORKSPACE/android-dependencies/jenkins-android-build/libfl.so.2.0.0 /usr/lib/.
+    sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/libfl.so
+    sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/libfl.so.2
   displayName: 'Downloading ROM build dependencies'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script 2'
+    curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/bin/repo && chmod a+x /usr/bin/repo
+  displayName: 'Downloading repo from google'
+
+- script: |
+    ls -lah $WORKSPACE
+  displayName: 'List all the things!'
