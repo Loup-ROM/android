@@ -28,7 +28,7 @@ steps:
   displayName: 'Downloading ROM build dependencies'
 
 - script: |
-    sudo curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/bin/repo && sudo chmod a+x /usr/bin/repo
+    curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && sudo chmod a+x ~/bin/repo && export PATH="$HOME/bin:$PATH"
   displayName: 'Downloading repo from google'
 
 - script: |
