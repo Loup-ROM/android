@@ -1,54 +1,56 @@
 # Starter pipeline
 
-pool:
-  vmImage: 'Ubuntu 16.04'
+jobs:
+- job: Build
+  timeoutInMinutes: 0
+  pool:
+    vmImage: 'Ubuntu 16.04'
+  variables:
+    WORKSPACE: '$(system.defaultWorkingDirectory)' # Current workspace
+    ANDROID_VERSION: 'cm-14.1' # Default branch
 
-variables:
-  WORKSPACE: '$(system.defaultWorkingDirectory)' # Current workspace
-  ANDROID_VERSION: 'cm-14.1' # Default branch
+  steps:
+  - script: |
+      sudo apt-get update --fix-missing
+    displayName: 'Update our repos!'
 
-steps:
-- script: |
-    sudo apt-get update --fix-missing
-  displayName: 'Update our repos!'
-
-- script: |
-    mkdir ~/bin && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && sudo chmod a+x ~/bin/repo && export PATH="$HOME/bin:$PATH"
-  displayName: 'Downloading repo from google'
+  - script: |
+      mkdir ~/bin && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && sudo chmod a+x ~/bin/repo && export PATH="$HOME/bin:$PATH"
+    displayName: 'Downloading repo from google'
   
-- script: |
-    sudo apt-get install -y g++ zip ccache gcc make libfl-dev libncurses5-dev flex bc kmod
-  displayName: 'Downloading kernel build dependencies'
+  - script: |
+      sudo apt-get install -y g++ zip ccache gcc make libfl-dev libncurses5-dev flex bc kmod
+    displayName: 'Downloading kernel build dependencies'
 
-- script: |
-    sudo apt-get install -y openjdk-8-jdk build-essential g++-multilib gcc-multilib gperf imagemagick lib32ncurses5-dev lib32readline6-dev lib32z1-dev libesd0-dev liblz4-tool libsdl1.2-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush schedtool squashfs-tools xsltproc zlib1g-dev rsync autoconf automake perl
-    mkdir $WORKSPACE/android-dependencies && git clone https://github.com/bitrvmpd/jenkins-android-build.git --depth=1 $WORKSPACE/android-dependencies/jenkins-android-build
-    sudo mv $WORKSPACE/android-dependencies/jenkins-android-build/libfl.so.2.0.0 /usr/lib/.
-    sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/libfl.so
-    sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/libfl.so.2
-    sudo mkdir -p /usr/lib/x86_64-linux-gnu
-    sudo rm /usr/lib/x86_64-linux-gnu/libfl.so
-    sudo rm /usr/lib/x86_64-linux-gnu/libfl.so.2
-    sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/x86_64-linux-gnu/libfl.so
-    sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/x86_64-linux-gnu/libfl.so.2
-  displayName: 'Downloading ROM build dependencies'
+  - script: |
+      sudo apt-get install -y openjdk-8-jdk build-essential g++-multilib gcc-multilib gperf imagemagick lib32ncurses5-dev lib32readline6-dev lib32z1-dev libesd0-dev liblz4-tool libsdl1.2-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush schedtool squashfs-tools xsltproc zlib1g-dev rsync autoconf automake perl
+      mkdir $WORKSPACE/android-dependencies && git clone https://github.com/bitrvmpd/jenkins-android-build.git --depth=1 $WORKSPACE/android-dependencies/jenkins-android-build
+      sudo mv $WORKSPACE/android-dependencies/jenkins-android-build/libfl.so.2.0.0 /usr/lib/.
+      sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/libfl.so
+      sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/libfl.so.2
+      sudo mkdir -p /usr/lib/x86_64-linux-gnu
+      sudo rm /usr/lib/x86_64-linux-gnu/libfl.so
+      sudo rm /usr/lib/x86_64-linux-gnu/libfl.so.2
+      sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/x86_64-linux-gnu/libfl.so
+      sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/x86_64-linux-gnu/libfl.so.2
+    displayName: 'Downloading ROM build dependencies'
 
-- script: |
-    cd $WORKSPACE
-    ~/bin/repo init -u git://github.com/bitrvmpd/android.git -b $ANDROID_VERSION --depth=1
-    ~/bin/repo sync -c -n --force-sync -j 16 && ~/bin/repo sync -c -l -j 16
-  displayName: 'Syncing sources'
+  - script: |
+      cd $WORKSPACE
+      ~/bin/repo init -u git://github.com/bitrvmpd/android.git -b $ANDROID_VERSION --depth=1
+      ~/bin/repo sync -c -n --force-sync -j 16 && ~/bin/repo sync -c -l -j 16
+    displayName: 'Syncing sources'
 
-- script: |
-    cd $WORKSPACE
-    bash loup/tools/build.sh santoni
-  displayName: 'Build santoni'
+  - script: |
+      cd $WORKSPACE
+      bash loup/tools/build.sh santoni
+    displayName: 'Build santoni'
   
-- script: |
-    cd $WORKSPACE
-    bash loup/tools/build.sh ether
-  displayName: 'Build ether'
+  - script: |
+      cd $WORKSPACE
+      bash loup/tools/build.sh ether
+    displayName: 'Build ether'
 
-- script: |
-    ls -lah $WORKSPACE
-  displayName: 'List all the things!'
+  - script: |
+      ls -lah $WORKSPACE
+    displayName: 'List all the things!'
