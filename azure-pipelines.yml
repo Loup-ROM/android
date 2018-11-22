@@ -32,5 +32,21 @@ steps:
   displayName: 'Downloading ROM build dependencies'
 
 - script: |
+    cd $WORKSPACE
+    repo init -u git://github.com/bitrvmpd/android.git -b $ANDROID_VERSION --depth=1
+    repo sync -c -n -j 1 --force-sync && python /usr/bin/repo sync -c -l -j 16
+  displayName: 'Syncing sources'
+
+- script: |
+    cd $WORKSPACE
+    bash loup/tools/build.sh santoni
+  displayName: 'Build santoni'
+  
+- script: |
+    cd $WORKSPACE
+    bash loup/tools/build.sh ether
+  displayName: 'Build ether'
+
+- script: |
     ls -lah $WORKSPACE
   displayName: 'List all the things!'
