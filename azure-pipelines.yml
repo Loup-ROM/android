@@ -29,6 +29,9 @@ steps:
     sudo mv $WORKSPACE/android-dependencies/jenkins-android-build/libfl.so.2.0.0 /usr/lib/.
     sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/libfl.so
     sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/libfl.so.2
+    sudo mkdir -p /usr/lib/x86_64-linux-gnu
+    sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/x86_64-linux-gnu/libfl.so
+    sudo ln -s /usr/lib/libfl.so.2.0.0 /usr/lib/x86_64-linux-gnu/libfl.so.2
   displayName: 'Downloading ROM build dependencies'
 
 - script: |
