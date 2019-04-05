@@ -1,0 +1,75 @@
+---
+kind: pipeline
+name: Lineage 14.1
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: build
+  build:
+    image: bitrvmpd/debian-build
+    args:
+      WORKSPACE: /usr/src/loup
+    context: .
+    dockerfile: Dockerfile
+
+- name: Build Xiaomi Redmi 4X (santoni)
+  image: bitrvmpd/debian-build
+  commands:
+  - export PATH=$PATH:/usr/bin/repo
+  - mkdir -p /usr/src/los141
+  - export WORKSPACE=/usr/src/los141
+  - cd $WORKSPACE
+  - repo init -u git://github.com/bitrvmpd/android.git -b $ANDROID_VERSION --depth=1
+  - "repo sync -f -c -n --force-sync -j 5 && repo sync -f -c -l -j 5"
+  - loup/tools/build.sh santoni
+  environment:
+    ANDROID_VERSION: cm-14.1
+  volumes:
+  - name: cache
+    path: /usr/src
+
+- name: Publish
+  image: bitrvmpd/debian-build
+  commands:
+  - export WORKSPACE=/usr/src/los141
+  - export DEVICE=santoni
+  - $WORKSPACE/loup/tools/get_latest_build.sh $DEVICE
+  - export LATEST=$(cat latest-file)
+  - $WORKSPACE/loup/tools/deltaenv.sh $DEVICE
+  - export OLD_BUILD_NAME=$(basename $LATEST .zip)
+  - "export LATEST=$(ls $WORKSPACE/deltas/current/$DEVICE/lineage-*-*-*-$DEVICE.zip)"
+  - export NEW_BUILD_NAME=$(basename $LATEST .zip)
+  - $WORKSPACE/loup/tools/upload_files.sh $DEVICE $OLD_BUILD_NAME $NEW_BUILD_NAME
+  - $WORKSPACE/loup/tools/update_def.sh $DEVICE $LATEST
+  - "rm -rf $WORKSPACE/out/target/product/$DEVICE/*.zip"
+  - "rm -rf $WORKSPACE/out/target/product/$DEVICE/*.md5sum"
+  environment:
+    ghpass:
+      from_secret: ghpass
+    ghuser:
+      from_secret: ghuser
+    sfpass:
+      from_secret: sfpass
+    sfproject:
+      from_secret: sfproject
+    sfusername:
+      from_secret: sfusername
+  volumes:
+  - name: cache
+    path: /usr/src
+
+volumes:
+- name: cache
+  host:
+    path: /usr/src
+
+trigger:
+  branch:
+  - cm-14.1
+  event:
+  - push
+
+...

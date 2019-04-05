@@ -1,5 +1,6 @@
 LineageOS
 ===========
+[![Build Status](https://ci.haus.fxb.mx/api/badges/Loup-ROM/android/status.svg?ref=refs/heads/cm-14.1)](https://ci.haus.fxb.mx/Loup-ROM/android)
 
 Submitting Patches
 ------------------
