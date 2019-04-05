@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- device tree -->	
+    <!--<project path="device/xiaomi/santoni" name="Loup-ROM/android_device_xiaomi_santoni" remote="github" revision="cm-14.1" />-->
+    <!-- kernel -->
+    <!--<project path="kernel/xiaomi/msm8937" name="bitrvmpd/msm-3.18" remote="github" revision="rel/msm-3.18-nougat" />-->
+    <!-- vendor -->
+    <project path="vendor/xiaomi" name="TheMuppets/proprietary_vendor_xiaomi" remote="github" revision="lineage-16.0" />
+
+
+    <!-- santoni related fixes-->
+    <!-- Flac playback fix -->
+    <!--<remove-project name="LineageOS/android_frameworks_av"/>-->
+    <!--<project path="frameworks/av" name="Loup-ROM/android_frameworks_av" groups="pdk"/>-->
+</manifest>
