@@ -7,6 +7,10 @@
     <!-- vendor -->
     <project path="vendor/xiaomi" name="ryan-andri/android_vendor_xiaomi_santoni" remote="github" revision="cr-7.0" />
 
+    <project name="LineageOS/android_device_xiaomi_santoni" path="device/xiaomi/santoni" remote="github" />
+    <project name="LineageOS/android_device_xiaomi_msm8937-common" path="device/xiaomi/msm8937-common" remote="github" />
+    <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" />
+    <project name="LineageOS/android_kernel_xiaomi_msm8937" path="kernel/xiaomi/msm8937" remote="github" revision="lineage-15.1" />
 
     <!-- santoni related fixes-->
     <!-- Flac playback fix -->
