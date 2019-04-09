@@ -5,8 +5,8 @@
     <!-- kernel -->
     <!--<project path="kernel/xiaomi/msm8937" name="bitrvmpd/msm-3.18" remote="github" revision="rel/msm-3.18-nougat" />-->
     <!-- vendor -->
-    <project path="vendor/xiaomi" name="ryan-andri/android_vendor_xiaomi_santoni" remote="github" revision="cr-7.0" />
-
+    <!--<project path="vendor/xiaomi" name="ryan-andri/android_vendor_xiaomi_santoni" remote="github" revision="cr-7.0" />-->
+    <project path="vendor/xiaomi" name="TheMuppets/proprietary_vendor_xiaomi" remote="github" revision="lineage-16.0" />
     <project name="LineageOS/android_device_xiaomi_santoni" path="device/xiaomi/santoni" remote="github" />
     <project name="LineageOS/android_device_xiaomi_msm8937-common" path="device/xiaomi/msm8937-common" remote="github" />
     <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" />
