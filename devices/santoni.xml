@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <!-- device tree -->	
-    <!--<project path="device/xiaomi/santoni" name="Loup-ROM/android_device_xiaomi_santoni" remote="github" revision="cm-14.1" />-->
-    <!-- kernel -->
-    <!--<project path="kernel/xiaomi/msm8937" name="bitrvmpd/msm-3.18" remote="github" revision="rel/msm-3.18-nougat" />-->
-    <!-- vendor -->
-    <project path="vendor/xiaomi" name="ryan-andri/android_vendor_xiaomi_santoni" remote="github" revision="cr-7.0" />
-    <project path="device/xiaomi/santoni" name="ryan-andri/android_device_xiaomi_santoni" remote="github" revision="cr-7.0" />
-    <project path="kernel/xiaomi/santoni" name="ryan-andri/android_kernel_xiaomi_santoni" remote="github" revision="pie-google" />
+  <!-- device tree -->
+  <project path="device/xiaomi/santoni" name="Loup-ROM/android_device_xiaomi_santoni" remote="github" revision="lineage-16.0" />
+  <!-- vendor tree -->
+  <project path="vendor/xiaomi" name="Loup-ROM/android_vendor_xiaomi_santoni" remote="github" revision="lineage-16.0" />
+  <!-- kernel -->
+  <project path="kernel/xiaomi/santoni" name="bitrvmpd/msm-3.18" remote="github" revision="rel/msm-3.18-pie" />
 
-    <!--<project path="vendor/xiaomi" name="TheMuppets/proprietary_vendor_xiaomi" remote="github" revision="lineage-16.0" />-->
-    <!--<project name="LineageOS/android_device_xiaomi_santoni" path="device/xiaomi/santoni" remote="github" />-->
-    <!--<project name="LineageOS/android_device_xiaomi_msm8937-common" path="device/xiaomi/msm8937-common" remote="github" />-->
     <!--<project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" />-->
-    <!--<project name="LineageOS/android_kernel_xiaomi_msm8937" path="kernel/xiaomi/msm8937" remote="github" revision="lineage-15.1" />-->
     <!-- santoni related fixes-->
     <!-- Flac playback fix -->
     <!--<remove-project name="LineageOS/android_frameworks_av"/>-->
