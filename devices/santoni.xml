@@ -5,7 +5,7 @@
   <!-- vendor tree -->
   <project path="vendor/xiaomi" name="Loup-ROM/android_vendor_xiaomi_santoni" remote="github" revision="lineage-16.0" />
   <!-- kernel -->
-  <project path="kernel/xiaomi/santoni" name="bitrvmpd/msm-3.18" remote="github" revision="rel/msm-3.18-pie" />
+  <project path="kernel/xiaomi/santoni" name="bitrvmpd/msm-3.18" remote="github" revision="rel/msm-3.18-oreo" />
 
     <!--<project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" />-->
     <!-- santoni related fixes-->
