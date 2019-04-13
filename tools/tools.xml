@@ -3,18 +3,18 @@
     <!-- build script -->
     <project path="loup/tools" name="Loup-ROM/android_loup_tools" remote="github" revision="lineage-16.0" />
 
-    <!-- Remove builint LineageOS compiler -->
-    <!--<remove-project name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" />-->
-    <!--<remove-project name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9"/>-->
+    <!-- Remove builint gcc compiler -->
+    <remove-project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" />
+    <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9"/>
     
   <!-- Add UberTC toolchain -->
-  <!--<project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="bitrvmpd/aarch64-linux-android-6.x" remote="github" revision="master" />-->
-  <!--<project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="bitrvmpd/arm-linux-androideabi-6.x" remote="github" revision="master" groups="pdk,linux,arm" clone-depth="1" />-->
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="bitrvmpd/aarch64-linux-android-7.x" remote="github" revision="master" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="bitrvmpd/arm-linux-androideabi-7.x" remote="github" revision="master" groups="pdk,linux,arm" clone-depth="1" />
   <!-- Generic qcom common configuration tools -->
   <!--<project path="device/qcom/common" name="LineageOS/android_device_qcom_common"/>-->
   
-  <!-- Add sdllvm 3.8 -->
-  <!--<project path="prebuilts/clang/linux-x86/host/sdclang-3.8/" name="ThankYouMario/proprietary_vendor_qcom_sdclang-3.8_linux-x86" revision="nougat-mr2" remote="github" />-->
+  <!-- Add sdllvm 6.0.2 -->
+  <project path="prebuilts/clang/linux-x86/host/sdclang-6.0.2/" name="ghostrider-reborn/sdclang-6.0.2" revision="master" remote="github" />
     
   <!-- Add OpenDelta Updater -->
   <!-- <project path="packages/apps/OpenDelta" name="Loup-ROM/android_packages_apps_OpenDelta" remote="github" revision="android-7.1" />-->
