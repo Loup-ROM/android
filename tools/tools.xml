@@ -17,7 +17,7 @@
   <project path="prebuilts/clang/host/linux-x86/sdclang-602" name="ghostrider-reborn/sdclang-6.0.2" revision="master" remote="github" />
 
   <!-- Replace soong -->
-  <remove-project name="LineageOS/android_build_soong">
+  <remove-project name="LineageOS/android_build_soong" />
   <project path="build/soong" name="Loup-ROM/android_build_soong" revision="lineage-16.0" remote="github" /> 
   <!-- Add OpenDelta Updater -->
   <!-- <project path="packages/apps/OpenDelta" name="Loup-ROM/android_packages_apps_OpenDelta" remote="github" revision="android-7.1" />-->
