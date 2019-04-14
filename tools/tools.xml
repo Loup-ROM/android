@@ -14,8 +14,11 @@
   <!--<project path="device/qcom/common" name="LineageOS/android_device_qcom_common"/>-->
   
   <!-- Add sdllvm 6.0.2 -->
-  <project path="prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_4.0/prebuilt/linux-x86_64" name="ghostrider-reborn/sdclang-6.0.2" revision="master" remote="github" />
-    
+  <project path="prebuilts/clang/host/linux-x86/sdclang-602" name="ghostrider-reborn/sdclang-6.0.2" revision="master" remote="github" />
+
+  <!-- Replace soong -->
+  <remove-project name="LineageOS/android_build_soong">
+  <project path="build/soong" name="Loup-ROM/android_build_soong" revision="lineage-16.0" remote="github" /> 
   <!-- Add OpenDelta Updater -->
   <!-- <project path="packages/apps/OpenDelta" name="Loup-ROM/android_packages_apps_OpenDelta" remote="github" revision="android-7.1" />-->
 </manifest>
