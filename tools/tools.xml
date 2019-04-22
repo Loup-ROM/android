@@ -19,6 +19,10 @@
   <!-- Replace soong -->
   <remove-project name="LineageOS/android_build_soong" />
   <project path="build/soong" name="Loup-ROM/android_build_soong" revision="lineage-16.0" remote="github" /> 
+
+  <!-- Replace linage/vendor -->
+ <remove-project name="LineageOS/android_vendor_lineage" />
+ <project path="vendor/lineage" name="Loup-ROM/android_vendor_lineage" revision="lineage-16.0" remote="github" />
   <!-- Add OpenDelta Updater -->
   <!-- <project path="packages/apps/OpenDelta" name="Loup-ROM/android_packages_apps_OpenDelta" remote="github" revision="android-7.1" />-->
 </manifest>
