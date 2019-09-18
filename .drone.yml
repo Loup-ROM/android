@@ -31,6 +31,36 @@ steps:
   - name: cache
     path: /usr/src
 
+- name: Publish
+  image: bitrvmpd/debian-build
+  commands:
+  - export WORKSPACE=/usr/src/los141
+  - export DEVICE=santoni
+  - $WORKSPACE/loup/tools/get_latest_build.sh $DEVICE
+  - export LATEST=$(cat latest-file)
+  - $WORKSPACE/loup/tools/deltaenv.sh $DEVICE
+  - export OLD_BUILD_NAME=$(basename $LATEST .zip)
+  - "export LATEST=$(ls $WORKSPACE/deltas/current/$DEVICE/lineage-*-*-*-$DEVICE.zip)"
+  - export NEW_BUILD_NAME=$(basename $LATEST .zip)
+  - $WORKSPACE/loup/tools/upload_files.sh $DEVICE $OLD_BUILD_NAME $NEW_BUILD_NAME
+  - $WORKSPACE/loup/tools/update_def.sh $DEVICE $LATEST
+  - "rm -rf $WORKSPACE/out/target/product/$DEVICE/*.zip"
+  - "rm -rf $WORKSPACE/out/target/product/$DEVICE/*.md5sum"
+  environment:
+    ghpass:
+      from_secret: ghpass
+    ghuser:
+      from_secret: ghuser
+    sfpass:
+      from_secret: sfpass
+    sfproject:
+      from_secret: sfproject
+    sfusername:
+      from_secret: sfusername
+  volumes:
+  - name: cache
+    path: /usr/src
+
 volumes:
 - name: cache
   host:
