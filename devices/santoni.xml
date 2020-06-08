@@ -5,7 +5,7 @@
   <!-- vendor tree -->
   <project path="vendor/xiaomi" name="Loup-ROM/vendor_xiaomi_santoni" remote="github" revision="ten" />
   <!-- kernel -->
-  <project path="kernel/xiaomi/santoni" name="bitrvmpd/okami" remote="github" revision="rel/android-10-wip" />
+  <project path="kernel/xiaomi/santoni" name="bitrvmpd/okami" remote="github" revision="rel/okami-10-wip" />
 
     <!--<project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" />-->
     <!-- santoni related fixes-->
