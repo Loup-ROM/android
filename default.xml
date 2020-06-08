@@ -862,4 +862,5 @@
   <!-- Paranoid Android additions -->
   <include name="manifests/aospa.xml"/>
 
+  <include name="devices/santoni.xml" />
 </manifest>

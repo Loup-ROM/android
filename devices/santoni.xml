@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- device tree -->
+  <project path="device/xiaomi/santoni" name="Loup-ROM/device_xiaomi_santoni" remote="github" revision="quartz" />
+  <!-- vendor tree -->
+  <project path="vendor/xiaomi" name="Loup-ROM/vendor_xiaomi_santoni" remote="github" revision="ten" />
+  <!-- kernel -->
+  <project path="kernel/xiaomi/santoni" name="bitrvmpd/okami" remote="github" revision="rel/android-10-wip" />
+
+    <!--<project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" />-->
+    <!-- santoni related fixes-->
+    <!-- Flac playback fix -->
+    <!--<remove-project name="LineageOS/android_frameworks_av"/>-->
+    <!--<project path="frameworks/av" name="Loup-ROM/android_frameworks_av" groups="pdk"/>-->
+</manifest>
+
