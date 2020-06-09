@@ -8,6 +8,8 @@
   <project path="kernel/xiaomi/santoni" name="bitrvmpd/okami" remote="github" revision="rel/okami-10-wip" />
   
   <!-- AOSPA Dependencies -->
+  <remove-project name="AOSPA/android_packages_apps_Bluetooth" />
+           
   <project path="hardware/qcom/audio" name="AOSPA/android_hardware_qcom_audio" remote="github" revision="quartz-89xx" />
   <project path="hardware/qcom/display" name="AOSPA/android_hardware_qcom_display" remote="github" revision="quartz-89xx" />
   <project path="hardware/qcom/media" name="AOSPA/android_hardware_qcom_media" remote="github" revision="quartz-89xx" />
