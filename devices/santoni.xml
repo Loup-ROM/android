@@ -9,6 +9,8 @@
   
   <!-- AOSPA Dependencies -->
   <remove-project name="AOSPA/android_packages_apps_Bluetooth" />
+  <!-- Trying to fix libpfium build errors... -->
+  <remove-project name="platform/external/pdfium" />
            
   <project path="hardware/qcom/audio" name="AOSPA/android_hardware_qcom_audio" remote="github" revision="quartz-89xx" />
   <project path="hardware/qcom/display" name="AOSPA/android_hardware_qcom_display" remote="github" revision="quartz-89xx" />
@@ -18,5 +20,7 @@
   <project path="vendor/qcom/common" name="ThankYouMario/proprietary_vendor_qcom_common" remote="github" revision="quartz" />
   <project path="packages/apps/Bluetooth" name="AOSPA/android_packages_apps_Bluetooth" remote="github" revision="quartz-dev" />
   <project path="packages/apps/Snap" name="ghostrider-reborn/android_packages_apps_Snap" remote="github" revision="quartz" />
+  
+  <project name="platform/external/pdfium" path="external/pdfium" remote="aosp"/>
 </manifest>
 
