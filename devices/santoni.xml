@@ -5,7 +5,7 @@
   <!-- vendor tree -->
   <project path="vendor/xiaomi" name="Loup-ROM/vendor_xiaomi_santoni" remote="github" revision="ten" />
   <!-- kernel -->
-  <project path="kernel/xiaomi/santoni" name="bitrvmpd/okami" remote="github" revision="rel/okami-10-wip" />
+  <project path="kernel/xiaomi/santoni" name="bitrvmpd/msm-3.18" remote="github" revision="rel/msm-3.18-oreo" />
   
   <!-- AOSPA Dependencies -->
   <remove-project name="AOSPA/android_packages_apps_Bluetooth" />
