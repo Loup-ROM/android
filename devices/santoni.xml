@@ -13,7 +13,10 @@
   <remove-project name="platform/external/pdfium" />
   <!-- Track own hardware/qcom/wlan -->
   <remove-project name="AOSPA/android_hardware_qcom_wlan" />
-           
+  <!-- Track own hardware/interfaces , Fixes 3.18 kernel warnings -->
+  <remove-project name="AOSPA/android_hardware_interfaces" />
+
+  <project path="hardware/interfaces" name="Loup-ROM/android_hardware_interfaces" remote="github" revision="quartz" />
   <project path="hardware/qcom/audio" name="AOSPA/android_hardware_qcom_audio" remote="github" revision="quartz-89xx" />
   <project path="hardware/qcom/display" name="AOSPA/android_hardware_qcom_display" remote="github" revision="quartz-89xx" />
   <project path="hardware/qcom/media" name="AOSPA/android_hardware_qcom_media" remote="github" revision="quartz-89xx" />
